@@ -14,7 +14,7 @@ You may find input parameters, output examples with explanations for each item, 
 - Flight simulation
 
 ### Response
-To get information about all live flights in the world in one call:
+Data of all live flights in the world in one call:
 
 **GET** http://aviation-edge.com/v2/public/flights?key=[API_KEY]&limit=30000
 
@@ -22,15 +22,15 @@ Specific flight based on flight number:
 
 **GET** http://aviation-edge.com/v2/public/flights?key=[API_KEY]&flightIata=W8519
 
-All flights of a specific Airlines:
+All flights of a specific airline:
 
 **GET** http://aviation-edge.com/v2/public/flights?key=[API_KEY]&airlineIata=W8
 
-Flights from departure location:
+Flights from a departure location:
 
 GET http://aviation-edge.com/v2/public/flights?key=[API_KEY]&depIata=MAD
 
-Flights from arrival location:
+Flights to an arrival location:
 
 **GET** http://aviation-edge.com/v2/public/flights?key=[API_KEY]&arrIata=GIG
 
