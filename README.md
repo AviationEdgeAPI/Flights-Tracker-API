@@ -1,8 +1,6 @@
 # Flights-Tracker-API
 Aviation Edge <a href="https://aviation-edge.com/flight-radar-and-tracker-api/"> Flights Tracker API</a> a JSON REST API that provides real-time location data of live, airborne flights worldwide. It generally covers ADS-B flights with a small amount of radar flights. The data is gathered from multiple sources, aggregated in  our servers and provided to API users in a constantly updated manner in real-time.
 
-[Get your API key](https://aviation-edge.com/premium-api/) in a minute and start testing the data right away. The API is provided through API subscriptions. All plans grant access to the Flights Tracker API and other APIs with a difference of the monthly API call limit. Choose the best plan for you and upgrade, downgrade or cancel your plan anytime without  commitments.
-
 ### Documentation
 You may find input parameters, output examples with explanations for each item, filter list, and more in the [documentation](https://aviation-edge.com/developers/), also available as a [GitHub repository](https://github.com/AviationEdgeAPI/aviation-edge-api). 
 
@@ -87,20 +85,10 @@ Combinations: two airports and a specific airline flying between them:
 ]
 ```
 
-### Questions & Support
+### Access & Support
 [Contact us](https://aviation-edge.com/contact/) via email for any questions or support requests.
+
+[Get your API key](https://aviation-edge.com/premium-api/) in a minute and start testing the data right away. The API is provided through API subscriptions. All plans grant access to the Flights Tracker API and other APIs with a difference of the monthly API call limit. Choose the best plan for you and upgrade, downgrade or cancel your plan anytime without  commitments.
 
 ### License
 The use of the API is subject to Aviation Edge [Terms and Conditions](https://aviation-edge.com/api-terms-of-service/).
-
-
-
-
-
-
-
-
-
-
-
-
