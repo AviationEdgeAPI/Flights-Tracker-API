@@ -14,31 +14,31 @@ You may find input parameters, output examples with explanations for each item, 
 ### Response
 Data of all live flights in the world in one call:
 
-**GET** http://aviation-edge.com/v2/public/flights?key=[API_KEY]&limit=30000
+**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&limit=30000`
 
 Specific flight based on flight number:
 
-**GET** http://aviation-edge.com/v2/public/flights?key=[API_KEY]&flightIata=W8519
+**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&flightIata=W8519`
 
 All flights of a specific airline:
 
-**GET** http://aviation-edge.com/v2/public/flights?key=[API_KEY]&airlineIata=W8
+**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&airlineIata=W8`
 
 Flights from a departure location:
 
-GET http://aviation-edge.com/v2/public/flights?key=[API_KEY]&depIata=MAD
+**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&depIata=MAD`
 
 Flights to an arrival location:
 
-**GET** http://aviation-edge.com/v2/public/flights?key=[API_KEY]&arrIata=GIG
+**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&arrIata=GIG`
 
 Flights within a circle area based on lat and lng values and radius as the distance:
 
-**GET** https://aviation-edge.com/v2/public/flights?key=[API_KEY]&lat=51.5074&lng=0.1278&distance=100&arrIata=LHR
+**GET** `https://aviation-edge.com/v2/public/flights?key=[API_KEY]&lat=51.5074&lng=0.1278&distance=100&arrIata=LHR`
 
 Combinations: two airports and a specific airline flying between them:
 
-**GET** http://aviation-edge.com/v2/public/flights?key=[API_KEY]&depIata=ATL&arrIata=ORD&airlineIata=UA
+**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&depIata=ATL&arrIata=ORD&airlineIata=UA`
 
 ```
 
