@@ -26,7 +26,7 @@ All flights of a specific airline:
 
 Flights from a departure location:
 
-**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&depIata=MAD`
+**GET** `https://aviation-edge.com/v2/public/flights?key=[API_KEY]&depIata=MAD`
 
 Flights to an arrival location:
 
