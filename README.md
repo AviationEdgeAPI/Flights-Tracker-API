@@ -14,15 +14,15 @@ You may find input parameters, output examples with explanations for each item, 
 ### Response
 Data of all live flights in the world in one call:
 
-**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&limit=30000`
+**GET** `https://aviation-edge.com/v2/public/flights?key=[API_KEY]&limit=30000`
 
 Specific flight based on flight number:
 
-**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&flightIata=W8519`
+**GET** `https://aviation-edge.com/v2/public/flights?key=[API_KEY]&flightIata=W8519`
 
 All flights of a specific airline:
 
-**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&airlineIata=W8`
+**GET** `https://aviation-edge.com/v2/public/flights?key=[API_KEY]&airlineIata=W8`
 
 Flights from a departure location:
 
@@ -30,7 +30,7 @@ Flights from a departure location:
 
 Flights to an arrival location:
 
-**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&arrIata=GIG`
+**GET** `https://aviation-edge.com/v2/public/flights?key=[API_KEY]&arrIata=GIG`
 
 Flights within a circle area based on lat and lng values and radius as the distance:
 
@@ -38,7 +38,7 @@ Flights within a circle area based on lat and lng values and radius as the dista
 
 Combinations: two airports and a specific airline flying between them:
 
-**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&depIata=ATL&arrIata=ORD&airlineIata=UA`
+**GET** `https://aviation-edge.com/v2/public/flights?key=[API_KEY]&depIata=ATL&arrIata=ORD&airlineIata=UA`
 
 ```
 
