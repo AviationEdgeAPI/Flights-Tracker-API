@@ -1,8 +1,8 @@
 # Flights-Tracker-API
-Aviation Edge <a href="https://aviation-edge.com/flight-radar-and-tracker-api/"> Flights Tracker API</a> is a JSON REST API that provides real-time location data of live, airborne flights worldwide. It generally covers ADS-B flights with a number of radar flights. The data is gathered from multiple sources, aggregated in  our servers and provided to API users in a constantly updated manner in real-time.
+Aviation Edge <a href="https://aviation-edge.com/flight-radar-and-tracker-api/"> Flights Tracker API</a> is a JSON REST API that provides real-time location data of live, airborne flights worldwide. It generally covers ADS-B flights with a number of radar flights. The data is gathered from multiple sources, aggregated in our servers and provided to API users in a constantly updated manner in real-time.
 
 ### Documentation
-You may find input parameters, output examples with explanations for each item, filter list, and more in the [documentation](https://aviation-edge.com/developers/), also available as a [GitHub repository](https://github.com/AviationEdgeAPI/aviation-edge-api). 
+You may find input parameters, output examples with explanations for each item, filter list, and more in the [documentation](https://aviation-edge.com/developers/).
 
 ### Example Fields of Use
 - Virtual maps for flight tracking
@@ -11,7 +11,7 @@ You may find input parameters, output examples with explanations for each item, 
 - Fuel consumption analysis
 - Flight simulation
 
-### Response
+### Request 
 Data of all live flights in the world in one call:
 
 **GET** `https://aviation-edge.com/v2/public/flights?key=[API_KEY]&limit=30000`
@@ -39,6 +39,74 @@ Flights within a circle area based on lat and lng values and radius as the dista
 Combinations: two airports and a specific airline flying between them:
 
 **GET** `https://aviation-edge.com/v2/public/flights?key=[API_KEY]&depIata=ATL&arrIata=ORD&airlineIata=UA`
+
+### Useful Code Examples
+
+1.	To fetch data from the API (axios library used):
+
+```
+const axios = require('axios');
+
+const API_KEY = 'YOUR_API_KEY'; // Replace with your API key
+const ENDPOINT = `https://aviation-edge.com/v2/public/flights?key=${API_KEY}&depIata=CDG`;
+
+async function fetchData() {
+    try {
+        const response = await axios.get(ENDPOINT);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching data from API:', error);
+    }
+}
+
+// Usage:
+fetchData().then(data => {
+    console.log(data);
+});
+```
+
+2.	To parse the data
+
+In the example, we’ll fetch all live flights that have the “en-route” status.
+
+```
+async function getEnrouteFlights() {
+    const data = await fetchData();
+    const enrouteFlights = data
+        .filter(flight => flight.status === 'en-route')
+        .map(flight => flight.flight.iataNumber);
+
+    return enrouteFlights;
+}
+
+// Usage:
+getEnrouteFlights().then(flights => {
+    console.log('En-route flights:', flights);
+});
+```
+
+3.	Top print specific details
+
+Fetching specific details about each flight like its airline, flight number or destination airport.
+
+```
+function printFlightDetails(data) {
+    data.forEach(flight => {
+        const airlineName = flight.airline.name || flight.airline.iataCode;
+        const flightNumber = flight.flight.iataNumber;
+        const destination = flight.arrival.iataCode;
+        
+        console.log(`${airlineName} Flight ${flightNumber} is heading to ${destination}.`);
+    });
+}
+
+// Usage:
+fetchData().then(data => {
+    printFlightDetails(data);
+});
+```
+
+### 200 OK Response
 
 ```
 
